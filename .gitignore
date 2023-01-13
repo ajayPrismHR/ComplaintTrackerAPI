@@ -1,0 +1,8 @@
+
+*.dll
+obj/Debug/.NETFramework,Version=v4.6.AssemblyAttributes.cs
+obj/Debug/ComplaintTrackerAPI.csproj.CopyComplete
+obj/Debug/ComplaintTrackerAPI.csproj.CoreCompileInputs.cache
+obj/Debug/ComplaintTrackerAPI.csproj.FileListAbsolute.txt
+obj/Debug/ComplaintTrackerAPI.pdb
+obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
