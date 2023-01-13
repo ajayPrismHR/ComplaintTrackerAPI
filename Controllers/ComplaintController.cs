@@ -4,36 +4,32 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using ComplaintTrackerAPI.Models;
 
 namespace ComplaintTrackerAPI.Controllers
 {
     public class ComplaintController : ApiController
     {
-        // GET: api/Complaint
-        public IEnumerable<string> Get()
+        Repository repository = new Repository();
+
+        [HttpPost]
+        public HttpResponseMessage SaveComplaint(Models.COMPLAINT modelComplaint)
         {
-            return new string[] { "value1", "value2" };
+
+            COMPLAINT obj = new COMPLAINT();
+
+            int complaintNo = repository.SaveComplaint(modelComplaint);
+            if (complaintNo <=0)
+            {
+            
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Error in save");
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK,"Save Successfully Complaint No." + complaintNo.ToString());
+            }
+
         }
 
-        // GET: api/Complaint/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Complaint
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT: api/Complaint/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Complaint/5
-        public void Delete(int id)
-        {
-        }
     }
 }

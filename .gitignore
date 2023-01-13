@@ -10,3 +10,4 @@ obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.exe
 *.cache
 *.cache
+.vs/ComplaintTrackerAPI/config/applicationhost.config
