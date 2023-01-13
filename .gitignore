@@ -6,3 +6,7 @@ obj/Debug/ComplaintTrackerAPI.csproj.CoreCompileInputs.cache
 obj/Debug/ComplaintTrackerAPI.csproj.FileListAbsolute.txt
 obj/Debug/ComplaintTrackerAPI.pdb
 obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.xml
+*.exe
+*.cache
+*.cache
